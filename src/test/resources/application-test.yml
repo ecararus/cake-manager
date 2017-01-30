@@ -1,0 +1,55 @@
+server:
+  display-name: cake-manager
+  address: 0.0.0.0
+  port: 8282
+  error:
+    path: /error
+    whitelabel.enabled: true
+
+management:
+  context-path: /manage
+  port: ${server.port} # temporary
+
+endpoints:
+  enabled: false
+  beans:
+    id: springbeans
+    sensitive: false
+  shutdown.enabled: false
+  restart.enabled: false
+  jmx.enabled: false
+  health:
+    sensitive: false
+    time-to-live: 1000
+
+logging.level.org.hibernate.SQL: debug
+
+spring:
+  application.name: cake-manager
+  application.external.datasource.gist: https://gist.githubusercontent.com/hart88/198f29ec5114a3ec3460/raw/8dd19a88f9b8d24c23d9960f3300d0c917a4f07c/cake.json
+  application.external.datasource.loadData.enabled: false
+  datasource:
+    url: jdbc:hsqldb:mem:db
+    name:
+    username: sa
+    password:
+  h2.console.enabled: true
+  jpa:
+    database: H2
+    open-in-view: false
+    show-sql: true
+    properties.hibernate.hbm2ddl.auto: create
+  cloud:
+    config.discovery.enabled: false
+    config.fail-fast: false
+  http:
+    multipart:
+      max-file-size: 20 MB
+      max-request-size: 21 MB
+
+hystrix.command.default:
+  execution:
+    isolation.thread.timeoutInMilliseconds: 5000
+    timeout.enabled: true
+  circuitBreaker.enabled: false
+  fallback.enabled: false
