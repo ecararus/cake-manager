@@ -1,5 +1,5 @@
 
-[Cake Manager Micro Service (fictitious)](https://ecararus.github.io/cake-manager/) [![Build Status](https://travis-ci.org/ecararus/cake-manager.svg?branch=master)}
+* [Cake Manager Micro Service (fictitious)](https://ecararus.github.io/cake-manager/) [![Build Status](https://travis-ci.org/ecararus/cake-manager.svg?branch=master)]
 =======================================
 
 A summer intern started on this project but never managed to get it finished.
