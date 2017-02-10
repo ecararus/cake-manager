@@ -1,4 +1,4 @@
-package com.waracle.cakemgr.vo;
+package com.eca.cakemgr.vo;
 
 import org.springframework.http.HttpStatus;
 

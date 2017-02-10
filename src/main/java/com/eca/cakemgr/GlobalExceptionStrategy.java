@@ -1,6 +1,6 @@
-package com.waracle.cakemgr;
+package com.eca.cakemgr;
 
-import com.waracle.cakemgr.vo.ApiError;
+import com.eca.cakemgr.vo.ApiError;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.MissingServletRequestParameterException;

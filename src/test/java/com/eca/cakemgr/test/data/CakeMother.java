@@ -1,8 +1,8 @@
-package com.waracle.cakemgr.test.data;
+package com.eca.cakemgr.test.data;
 
-import com.waracle.cakemgr.domain.Cake;
-import com.waracle.cakemgr.formater.CakeTransformer;
-import com.waracle.cakemgr.vo.CakeVO;
+import com.eca.cakemgr.formater.CakeTransformer;
+import com.eca.cakemgr.domain.Cake;
+import com.eca.cakemgr.vo.CakeVO;
 
 public final class CakeMother {
 

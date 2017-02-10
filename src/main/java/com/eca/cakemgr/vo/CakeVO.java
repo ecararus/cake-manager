@@ -1,16 +1,16 @@
-package com.waracle.cakemgr.vo;
+package com.eca.cakemgr.vo;
 
+import com.eca.cakemgr.formater.CakeDeserializer;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.google.auto.value.AutoValue;
-import com.waracle.cakemgr.formater.CakeDeserializer;
 
 import javax.validation.constraints.NotNull;
 
 @AutoValue
-@JsonDeserialize(builder = com.waracle.cakemgr.vo.AutoValue_CakeVO.Builder.class, using = CakeDeserializer.class)
+@JsonDeserialize(builder = AutoValue_CakeVO.Builder.class, using = CakeDeserializer.class)
 @JsonSerialize
 @JsonIgnoreProperties(ignoreUnknown = true)
 public abstract class CakeVO {
@@ -19,7 +19,7 @@ public abstract class CakeVO {
     }
 
     public static Builder builder() {
-        return new com.waracle.cakemgr.vo.AutoValue_CakeVO.Builder();
+        return new AutoValue_CakeVO.Builder();
     }
 
     @NotNull

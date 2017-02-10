@@ -1,7 +1,7 @@
-package com.waracle.cakemgr;
+package com.eca.cakemgr;
 
-import com.waracle.cakemgr.service.CakeExternalDataSource;
-import com.waracle.cakemgr.service.CakeService;
+import com.eca.cakemgr.service.CakeExternalDataSource;
+import com.eca.cakemgr.service.CakeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;

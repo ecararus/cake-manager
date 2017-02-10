@@ -1,6 +1,6 @@
-package com.waracle.cakemgr.test.data;
+package com.eca.cakemgr.test.data;
 
-import com.waracle.cakemgr.domain.Cake;
+import com.eca.cakemgr.domain.Cake;
 import org.hamcrest.Matcher;
 
 import static com.google.common.base.Preconditions.checkNotNull;

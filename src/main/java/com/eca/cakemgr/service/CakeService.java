@@ -1,6 +1,6 @@
-package com.waracle.cakemgr.service;
+package com.eca.cakemgr.service;
 
-import com.waracle.cakemgr.vo.CakeVO;
+import com.eca.cakemgr.vo.CakeVO;
 
 
 public interface CakeService {

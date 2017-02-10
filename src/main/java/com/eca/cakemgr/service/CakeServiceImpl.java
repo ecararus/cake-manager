@@ -1,10 +1,11 @@
-package com.waracle.cakemgr.service;
+package com.eca.cakemgr.service;
 
 
+import com.eca.cakemgr.formater.CakeTransformer;
+import com.eca.cakemgr.repository.CakeRepository;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
-import com.waracle.cakemgr.domain.Cake;
-import com.waracle.cakemgr.repository.CakeRepository;
-import com.waracle.cakemgr.vo.CakeVO;
+import com.eca.cakemgr.domain.Cake;
+import com.eca.cakemgr.vo.CakeVO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,8 +14,6 @@ import org.springframework.stereotype.Service;
 import javax.transaction.Transactional;
 
 import static com.google.common.collect.ImmutableList.of;
-import static com.waracle.cakemgr.formater.CakeTransformer.toDomain;
-import static com.waracle.cakemgr.formater.CakeTransformer.toVos;
 
 @Service
 @Transactional
@@ -33,7 +32,7 @@ public class CakeServiceImpl implements CakeService {
     @HystrixCommand(threadPoolKey = "CakeServiceImpl", fallbackMethod = "findAllFailOverCallTransfer")
     @Override
     public Iterable<CakeVO> findAll() {
-        return toVos(repository.findAll());
+        return CakeTransformer.toVos(repository.findAll());
     }
 
     @SuppressWarnings("unused")
@@ -45,7 +44,7 @@ public class CakeServiceImpl implements CakeService {
     @HystrixCommand(threadPoolKey = "CakeServiceImpl", fallbackMethod = "saveFailOverCallTransfer")
     @Override
     public void save(CakeVO cake) {
-        Cake domain = toDomain(cake);
+        Cake domain = CakeTransformer.toDomain(cake);
         repository.save(domain);
     }
 

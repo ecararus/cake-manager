@@ -1,10 +1,10 @@
-package com.waracle.cakemgr.api;
+package com.eca.cakemgr.api;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.waracle.cakemgr.ApplicationContextConfig;
-import com.waracle.cakemgr.domain.Cake;
-import com.waracle.cakemgr.repository.CakeRepository;
+import com.eca.cakemgr.ApplicationContextConfig;
+import com.eca.cakemgr.domain.Cake;
+import com.eca.cakemgr.repository.CakeRepository;
 import org.hamcrest.Matcher;
 import org.junit.Before;
 import org.junit.Test;
@@ -19,10 +19,10 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.web.context.WebApplicationContext;
 
-import static com.waracle.cakemgr.formater.CakeTransformer.toHumanReadable;
-import static com.waracle.cakemgr.test.data.CakeMatcher.matchesWith;
-import static com.waracle.cakemgr.test.data.CakeMother.produceCake;
-import static com.waracle.cakemgr.test.data.CakeMother.produceCakeVO;
+import static com.eca.cakemgr.formater.CakeTransformer.toHumanReadable;
+import static com.eca.cakemgr.test.data.CakeMatcher.matchesWith;
+import static com.eca.cakemgr.test.data.CakeMother.produceCake;
+import static com.eca.cakemgr.test.data.CakeMother.produceCakeVO;
 import static org.hamcrest.Matchers.*;
 import static org.junit.Assert.assertThat;
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;

@@ -1,4 +1,4 @@
-package com.waracle.cakemgr;
+package com.eca.cakemgr;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

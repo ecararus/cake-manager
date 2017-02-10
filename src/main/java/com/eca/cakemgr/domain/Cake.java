@@ -1,4 +1,4 @@
-package com.waracle.cakemgr.domain;
+package com.eca.cakemgr.domain;
 
 import javax.persistence.*;
 import java.io.Serializable;

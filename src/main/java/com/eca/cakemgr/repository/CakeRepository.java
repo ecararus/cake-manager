@@ -1,6 +1,6 @@
-package com.waracle.cakemgr.repository;
+package com.eca.cakemgr.repository;
 
-import com.waracle.cakemgr.domain.Cake;
+import com.eca.cakemgr.domain.Cake;
 import org.springframework.data.repository.CrudRepository;
 
 

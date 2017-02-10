@@ -1,14 +1,14 @@
-package com.waracle.cakemgr.api;
+package com.eca.cakemgr.api;
 
-import com.waracle.cakemgr.service.CakeService;
-import com.waracle.cakemgr.vo.CakeVO;
+import com.eca.cakemgr.formater.CakeTransformer;
+import com.eca.cakemgr.service.CakeService;
+import com.eca.cakemgr.vo.CakeVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
 
-import static com.waracle.cakemgr.formater.CakeTransformer.toHumanReadable;
-import static com.waracle.cakemgr.vo.CakeVO.builder;
+import static com.eca.cakemgr.vo.CakeVO.builder;
 import static org.springframework.http.HttpStatus.CREATED;
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 import static org.springframework.http.MediaType.TEXT_PLAIN_VALUE;
@@ -28,7 +28,7 @@ public class CakeController {
     @ResponseBody
     public String loadCakesInHumanReadableFormat() {
         final StringBuilder cakes = new StringBuilder();
-        service.findAll().forEach(cake -> cakes.append(toHumanReadable(cake)));
+        service.findAll().forEach(cake -> cakes.append(CakeTransformer.toHumanReadable(cake)));
         return cakes.toString();
     }
 

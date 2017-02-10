@@ -1,7 +1,7 @@
-package com.waracle.cakemgr.service;
+package com.eca.cakemgr.service;
 
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
-import com.waracle.cakemgr.vo.CakeVO;
+import com.eca.cakemgr.vo.CakeVO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.core.ParameterizedTypeReference;
