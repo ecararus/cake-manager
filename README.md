@@ -3,7 +3,7 @@
 =======================================
 
 ## About:
-Implementation for Waracle [requirements](https://github.com/ecararus/cake-manager/wiki/Requirements).
+Implementation for Smal microservice see [requirements](https://github.com/ecararus/cake-manager/wiki/Requirements).
 
 All requirements has been implemented the api is documented and exposed under port 8282.
 To see documentation and try it please visit: http://127.0.0.1:8282/swagger-ui.html
